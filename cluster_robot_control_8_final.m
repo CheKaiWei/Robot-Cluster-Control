@@ -8,7 +8,7 @@
 %%
 clear;
 clc;
-
+close all;
 %create LK1
 L1=[1 0 0 -1;-1 1 0 0;0 -1 1 0;0 0 -1 1];
 I2=eye(2);
@@ -55,15 +55,23 @@ plot(x1,y1,x2,y2,x3,y3,x4,y4)
 hold on
 
 %%dynamic display
-%{
+
 figure
+axis([-1500 1500 -1500 1500]);
 hold on
 len=length(x1);
 for i=1:10:len
-    plot(x1(i),y1(i),'o',x2(i),y2(i),'o',x3(i),y3(i),'o',x4(i),y4(i),'o')
+    %delete(h1)
+    h1=plot(x1(i),y1(i),'o');
+    h2=plot(x2(i),y2(i),'o');
+    h3=plot(x3(i),y3(i),'o');
+    h4=plot(x4(i),y4(i),'o');
     pause(0.01)
+    delete([h1 h2 h3 h4]);
+    %h1=plot(x1(i),y1(i),'o',x2(i),y2(i),'o',x3(i),y3(i),'o',x4(i),y4(i),'o')
+    
 end
-%}
+%}%{
 %{
 
 %speed display
