@@ -25,4 +25,4 @@ __How to use this project?__
 3. You can edit "cluster_robot_control_8_final_sim.slx" file to change the system.
 
 # Contact
-Feel to cantact me. My email is richardfeynman180778@gmail.com.
+Feel to contact me. My email is richardfeynman180778@gmail.com.
